@@ -5,22 +5,23 @@ pipeline {
         stage ('Clone') {
             steps {
                 git branch: 'master', url: "https://github.com/mahimrao/maven.git"
-            }
-        }
+                  }
+                          }
+           }
 
         stage ('Build') {
             steps {
                                  
- 
-            }
-        }
+  
+                  }
+                         }
 
         stage ('Deploy') {
           
                            "cmd /c mvn clean install".execute()
 
                        }
-}
+            }
 
        
    
