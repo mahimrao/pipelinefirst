@@ -5,6 +5,7 @@ pipeline {
         stage ('Clone') {
             steps {
                 git branch: 'master', url: "https://github.com/mahimrao/maven.git"
+                  println 'Cloning completed' 
                   }
                           }
            
@@ -12,7 +13,7 @@ pipeline {
         stage ('Build') {
             steps {
                       
-                  "cmd /c mvn clean install".execute()                    
+                  println 'Running Build!'                   
   
                   }
                          }
